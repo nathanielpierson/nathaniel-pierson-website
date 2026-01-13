@@ -1,4 +1,4 @@
-import './About.css'
+import "./About.css";
 
 function About() {
   return (
@@ -8,15 +8,21 @@ function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm a passionate developer who loves building innovative solutions
-              and bringing ideas to life through code. With a strong foundation
-              in modern web technologies, I enjoy working on projects that challenge
-              me to learn and grow.
-            </p>
-            <p>
-              My expertise spans across frontend and backend development, with
-              a focus on creating user-friendly, performant applications. I'm always
-              eager to explore new technologies and best practices.
+              My educational background in animation and video editing was
+              developed at Virginia Commonwealth University through their
+              diverse Kinetic Imaging program. This and my creative pursuits as
+              a hobby musician show how I am able to think outside the box. The
+              same skills that are used to storyboard an animation project are
+              used when using an AI assistant tool like Cursor or Claude to keep
+              my own end goal in mind when directing software programs. I took a
+              coding bootcamp in 2025 that taught me well-rounded skills for
+              being able to pick up and learn in any coding language and
+              framework. Specifically this bootcamp taught me transferable
+              skills through React for frontend and Ruby on Rails on backend. I
+              have a mix of technical expertise and creative inclination to be
+              able to use tools that are limited only by your imagination and
+              have a passion for the specifics of how technology functions to
+              figure out what happens when they don’t go as planned.
             </p>
             <div className="skills">
               <h3>Skills & Technologies</h3>
@@ -33,7 +39,7 @@ function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;
