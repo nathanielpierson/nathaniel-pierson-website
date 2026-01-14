@@ -33,6 +33,10 @@ function About() {
                 <span className="skill-tag">Python</span>
                 <span className="skill-tag">HTML/CSS</span>
                 <span className="skill-tag">Git</span>
+                <span className="skill-tag">Ruby on Rails</span>
+                <span className="skill-tag">Java</span>
+                <span className="skill-tag">Cursor</span>
+                <span className="skill-tag">Claude</span>
               </div>
             </div>
           </div>

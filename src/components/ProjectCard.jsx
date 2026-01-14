@@ -1,4 +1,4 @@
-import './ProjectCard.css'
+import "./ProjectCard.css";
 
 function ProjectCard({ project }) {
   return (
@@ -17,24 +17,46 @@ function ProjectCard({ project }) {
         <p className="project-description">{project.description}</p>
         <div className="project-tags">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="project-tag">{tech}</span>
+            <span key={index} className="project-tag">
+              {tech}
+            </span>
           ))}
         </div>
         <div className="project-links">
           {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
               Live Demo
             </a>
           )}
-          {project.githubUrl && (
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-              GitHub
+          {project.frontendGithubUrl && (
+            <a
+              href={project.frontendGithubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              Frontend
+            </a>
+          )}
+          {project.backendGithubUrl && (
+            <a
+              href={project.backendGithubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              Backend
             </a>
           )}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
