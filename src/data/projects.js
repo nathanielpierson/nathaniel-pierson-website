@@ -4,12 +4,12 @@ export const projects = [
     title: "Saladbar: The Plant-Growing App",
     description:
       "A brief description of your first project. Explain what it does, what technologies you used, and what problem it solves.",
-    technologies: ["React", "Node.js", "MongoDB"],
+    technologies: ["React", "Node.js", "Postgres"],
     liveUrl: "https://example.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/plant-capstone-frontend",
     backendGithubUrl: "https://github.com/nathanielpierson/plant-capstone-app",
-    image: null, // Add image path if you have one
+    image: "src/Images/saladbar-logo03.gif", // Add image path if you have one
   },
   {
     title: "Project Two",
@@ -22,13 +22,13 @@ export const projects = [
     image: null,
   },
   {
-    title: "Project Three",
+    title: "Modular Kaledoscopes: An Experimental Art Piece using Coding",
     description:
-      "Describe your third project here. What makes it unique? What did you learn from building it?",
-    technologies: ["JavaScript", "Express", "React"],
+      "Experiments in code recursion using Processing, an art-focused framework for Java. Prioritizes interactivity so users can be part of their own visual experience.",
+    technologies: ["Java", "Processing", "MacOS"],
     liveUrl: null,
-    frontendGithubUrl: "https://github.com/yourusername/project-three-frontend",
-    backendGithubUrl: "https://github.com/yourusername/project-three-backend",
-    image: null,
+    frontendGithubUrl:
+      "https://github.com/nathanielpierson/processing/tree/main",
+    image: "src/Images/all-moderewstrictive.gif",
   },
 ];
