@@ -1,6 +1,12 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ProjectCard.css";
 
 function ProjectCard({ project }) {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const hasBothGithub = project.frontendGithubUrl && project.backendGithubUrl;
+  const hasSingleGithub = project.frontendGithubUrl || project.backendGithubUrl;
+
   return (
     <div className="project-card">
       <div className="project-image">
@@ -23,6 +29,9 @@ function ProjectCard({ project }) {
           ))}
         </div>
         <div className="project-links">
+          <Link to={`/projects/${project.slug}`} className="project-link">
+            Learn More
+          </Link>
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -33,26 +42,47 @@ function ProjectCard({ project }) {
               Live Demo
             </a>
           )}
-          {project.frontendGithubUrl && (
+          {hasBothGithub ? (
+            <div className="github-dropdown-wrapper">
+              <button
+                className="project-link github-dropdown-btn"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                onBlur={() => setTimeout(() => setDropdownOpen(false), 200)}
+              >
+                GitHub
+                <span className="dropdown-arrow">▼</span>
+              </button>
+              {dropdownOpen && (
+                <div className="github-dropdown">
+                  <a
+                    href={project.frontendGithubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-dropdown-item"
+                  >
+                    Frontend
+                  </a>
+                  <a
+                    href={project.backendGithubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-dropdown-item"
+                  >
+                    Backend
+                  </a>
+                </div>
+              )}
+            </div>
+          ) : hasSingleGithub ? (
             <a
-              href={project.frontendGithubUrl}
+              href={project.frontendGithubUrl || project.backendGithubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
             >
-              Frontend
+              GitHub
             </a>
-          )}
-          {project.backendGithubUrl && (
-            <a
-              href={project.backendGithubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              Backend
-            </a>
-          )}
+          ) : null}
         </div>
       </div>
     </div>

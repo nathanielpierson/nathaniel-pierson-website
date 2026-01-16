@@ -1,34 +1,57 @@
 // Sample projects data - replace with your actual projects
 export const projects = [
   {
+    slug: "saladbar-plant-growing-app",
     title: "Saladbar: The Plant-Growing App",
     description:
-      "A brief description of your first project. Explain what it does, what technologies you used, and what problem it solves.",
+      "Track your plant collection, watering schedule, and growth over time with a playful, game-like interface.",
+    longDescription:
+      "Saladbar is a full-stack application for plant enthusiasts. It lets users create an account, add plants to their collection, and log care events like watering and repotting.\n\nOn the frontend, a React-based interface focuses on approachability and fun visuals so plant care feels more like a game than a chore. On the backend, a Node.js + Postgres API handles authentication, data storage, and querying, giving the app room to scale as collections grow.",
     technologies: ["React", "Node.js", "Postgres"],
     liveUrl: "https://example.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/plant-capstone-frontend",
     backendGithubUrl: "https://github.com/nathanielpierson/plant-capstone-app",
-    image: "src/Images/saladbar-logo03.gif", // Add image path if you have one
+    image: "src/Images/saladbar-logo03.gif",
   },
   {
+    slug: "example-fullstack-project-two",
+    title: "Last FM Charting App",
+    description:
+      "Another project description. Highlight the key features and your role in building it.",
+    longDescription:
+      "Use this slot for another full-stack project. You can describe the problem it solves, the architecture, and anything you learned while building it.",
+    technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
+    liveUrl: "https://example.com",
+    frontendGithubUrl: "https://github.com/yourusername/project-two-frontend",
+    backendGithubUrl: "https://github.com/yourusername/project-two-backend",
+    image: "src/Images/Charting App Images/2.png",
+  },
+  {
+    slug: "modular-kaleidoscopes",
+    title: "Modular Kaleidoscopes: An Experimental Art Piece using Coding",
+    description:
+      "Experimental, interactive kaleidoscope visuals built in Processing, focusing on recursion and user-driven variation.",
+    longDescription:
+      "This project explores recursion, symmetry, and emergent visuals using Processing, a Java-based creative coding framework.\n\nUsers can interact with parameters like color, rotation speed, and symmetry count to generate unique kaleidoscopic compositions, turning a simple ruleset into an endless set of visual outcomes.",
+    technologies: ["Java", "Processing", "macOS"],
+    liveUrl: null,
+    frontendGithubUrl:
+      "https://github.com/nathanielpierson/processing/tree/main",
+    backendGithubUrl: null,
+    image: "src/Images/all-moderewstrictive.gif",
+  },
+  {
+    slug: "example-fullstack-project-two",
     title: "Project Two",
     description:
       "Another project description. Highlight the key features and your role in building it.",
+    longDescription:
+      "Use this slot for another full-stack project. You can describe the problem it solves, the architecture, and anything you learned while building it.",
     technologies: ["Python", "Flask", "PostgreSQL"],
     liveUrl: "https://example.com",
     frontendGithubUrl: "https://github.com/yourusername/project-two-frontend",
     backendGithubUrl: "https://github.com/yourusername/project-two-backend",
     image: null,
-  },
-  {
-    title: "Modular Kaledoscopes: An Experimental Art Piece using Coding",
-    description:
-      "Experiments in code recursion using Processing, an art-focused framework for Java. Prioritizes interactivity so users can be part of their own visual experience.",
-    technologies: ["Java", "Processing", "MacOS"],
-    liveUrl: null,
-    frontendGithubUrl:
-      "https://github.com/nathanielpierson/processing/tree/main",
-    image: "src/Images/all-moderewstrictive.gif",
   },
 ];

@@ -1,0 +1,171 @@
+.project-detail {
+  padding: 6rem 2rem 4rem;
+  background: #f8f9fa;
+}
+
+.project-detail-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.project-detail-header {
+  margin-bottom: 2rem;
+}
+
+.project-detail-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-detail-image-wrapper {
+  margin: 2rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+.project-detail-image {
+  width: 100%;
+  display: block;
+}
+
+.project-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-detail-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.project-detail-long p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.project-detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-link.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+}
+
+.project-link.primary:hover {
+  color: #fff;
+}
+
+.github-dropdown-wrapper {
+  position: relative;
+}
+
+.github-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background: white;
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+.github-dropdown-btn:hover {
+  background: #f0f0f0;
+}
+
+.github-dropdown-btn .dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  margin-left: 0.25rem;
+}
+
+.github-dropdown-wrapper:hover .dropdown-arrow,
+.github-dropdown-wrapper:focus-within .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.github-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 150px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.github-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  border: none;
+}
+
+.github-dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #667eea;
+}
+
+.project-detail-back {
+  margin-top: 2rem;
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-detail-back:hover {
+  color: #764ba2;
+}
+
+.project-detail.not-found {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .project-detail {
+    padding: 5rem 1.25rem 3rem;
+  }
+
+  .project-detail-title {
+    font-size: 2rem;
+  }
+}
+

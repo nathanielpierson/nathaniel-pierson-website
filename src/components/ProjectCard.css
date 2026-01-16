@@ -81,6 +81,7 @@
   display: flex;
   gap: 1rem;
   margin-top: auto;
+  flex-wrap: wrap;
 }
 
 .project-link {
@@ -89,6 +90,11 @@
   font-weight: 600;
   transition: color 0.3s ease;
   position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .project-link:hover {
@@ -104,4 +110,57 @@
 
 .project-link:hover::after {
   transform: translateX(5px);
+}
+
+.github-dropdown-wrapper {
+  position: relative;
+}
+
+.github-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.github-dropdown-btn .dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  margin-left: 0.25rem;
+}
+
+.github-dropdown-wrapper:hover .dropdown-arrow,
+.github-dropdown-wrapper:focus-within .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.github-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 120px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.github-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  border: none;
+}
+
+.github-dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #667eea;
+}
+
+.github-dropdown-item::after {
+  content: '';
+  display: none;
 }
