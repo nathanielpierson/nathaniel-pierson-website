@@ -1,4 +1,3 @@
-// Sample projects data - replace with your actual projects
 export const projects = [
   {
     slug: "saladbar-plant-growing-app",
@@ -17,10 +16,9 @@ export const projects = [
   {
     slug: "example-fullstack-project-two",
     title: "Last FM Charting App",
-    description:
-      "Another project description. Highlight the key features and your role in building it.",
+    description: "needs written",
     longDescription:
-      "Use this slot for another full-stack project. You can describe the problem it solves, the architecture, and anything you learned while building it.",
+      "An exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.",
     technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
     liveUrl: "https://example.com",
     frontendGithubUrl: "https://github.com/yourusername/project-two-frontend",
@@ -43,7 +41,7 @@ export const projects = [
   },
   {
     slug: "example-fullstack-project-two",
-    title: "Project Two",
+    title: "Project Four",
     description:
       "Another project description. Highlight the key features and your role in building it.",
     longDescription:

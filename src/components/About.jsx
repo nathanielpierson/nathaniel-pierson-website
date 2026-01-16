@@ -22,7 +22,13 @@ function About() {
               have a mix of technical expertise and creative inclination to be
               able to use tools that are limited only by your imagination and
               have a passion for the specifics of how technology functions to
-              figure out what happens when they don’t go as planned.
+              figure out what happens when they don’t go as planned. Apart from
+              my professional pursuits, I have a variety of other interests,
+              especially in music. I enjoy going to concerts as well as
+              songwriting and producing my own music. I play keyboard and
+              electric guitar and am learning vocals. I currently reside in the
+              Charlottesville, VA area but am in between rentals and open to
+              explore any new area where I am offered a job.
             </p>
             <div className="skills">
               <h3>Skills & Technologies</h3>
