@@ -51,6 +51,29 @@ function ProjectDetail() {
           </div>
         )}
 
+        {project.screenshots && project.screenshots.length > 0 && (
+          <div className="project-detail-gallery">
+            {project.screenshots.map((shot, index) => (
+              <figure key={index} className="project-detail-figure">
+                <img
+                  src={shot.src}
+                  alt={
+                    shot.caption
+                      ? shot.caption
+                      : `${project.title} screenshot ${index + 1}`
+                  }
+                  className="project-detail-gallery-image"
+                />
+                {shot.caption && (
+                  <figcaption className="project-detail-caption">
+                    {shot.caption}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        )}
+
         <div className="project-detail-body">
           <p className="project-detail-description">{project.description}</p>
 

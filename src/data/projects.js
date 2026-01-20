@@ -1,6 +1,8 @@
-import saladbarLogo from "../Images/saladbar-logo03.gif";
-import lastfmChart2 from "../Images/Charting App Images/2.png";
-import kaleidoscopesGif from "../Images/all-moderewstrictive.gif";
+import saladbarLogo from "../Images/SaladBar images/saladbar-logo03.gif";
+import lastfmChartMain from "../Images/Charting App Images/2.png";
+import lastfmChartScreen01 from "../Images/Charting App Images/lastfm-sorting-screenshot01.png";
+import lastfmChartScreen03 from "../Images/Charting App Images/lastfm-sorting-screenshot03.png";
+import kaleidoscopesGif from "../Images/Kaleidoscopes images/all-moderewstrictive.gif";
 
 export const projects = [
   {
@@ -22,14 +24,25 @@ export const projects = [
     title: "Last FM Charting App",
     description: "needs written",
     longDescription:
-      "An exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.",
+      "My Last.fm Charting App is an exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.",
     technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
     liveUrl: "https://example.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/lastfm-timeline-frontend",
     backendGithubUrl:
       "https://github.com/nathanielpierson/lastfm-backend-node-version/tree/main",
-    image: lastfmChart2,
+    image: lastfmChartMain,
+    screenshots: [
+      {
+        src: lastfmChartScreen01,
+        caption:
+          "After entering the username of a a last.fm user, this app returns their listening data for albums over various time frames with the ability to resort the data by whichever available time measurement you choose.",
+      },
+      {
+        src: lastfmChartScreen03,
+        caption: null,
+      },
+    ],
   },
   {
     slug: "modular-kaleidoscopes",

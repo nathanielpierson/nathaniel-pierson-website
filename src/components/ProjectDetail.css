@@ -37,6 +37,31 @@
   display: block;
 }
 
+.project-detail-gallery {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-detail-figure {
+  margin: 0;
+}
+
+.project-detail-gallery-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.project-detail-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
+
 .project-detail-body {
   display: flex;
   flex-direction: column;
@@ -175,4 +200,3 @@
     font-size: 2rem;
   }
 }
-
