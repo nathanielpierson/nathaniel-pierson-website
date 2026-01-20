@@ -102,13 +102,18 @@
 }
 
 .project-link::after {
+  content: '';
+  display: none;
+}
+
+.project-link.with-arrow::after {
   content: '→';
   margin-left: 0.5rem;
   transition: transform 0.3s ease;
   display: inline-block;
 }
 
-.project-link:hover::after {
+.project-link.with-arrow:hover::after {
   transform: translateX(5px);
 }
 
@@ -117,31 +122,22 @@
 }
 
 .github-dropdown-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-}
-
-.github-dropdown-btn .dropdown-arrow {
-  font-size: 0.7rem;
-  transition: transform 0.3s ease;
-  margin-left: 0.25rem;
-}
-
-.github-dropdown-wrapper:hover .dropdown-arrow,
-.github-dropdown-wrapper:focus-within .dropdown-arrow {
-  transform: rotate(180deg);
 }
 
 .github-dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
+  left: auto;
   margin-top: 0.5rem;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   min-width: 120px;
+  max-width: min(240px, calc(100vw - 2rem));
   z-index: 10;
   overflow: hidden;
 }

@@ -21,8 +21,10 @@ export const projects = [
       "An exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.",
     technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
     liveUrl: "https://example.com",
-    frontendGithubUrl: "https://github.com/yourusername/project-two-frontend",
-    backendGithubUrl: "https://github.com/yourusername/project-two-backend",
+    frontendGithubUrl:
+      "https://github.com/nathanielpierson/lastfm-timeline-frontend",
+    backendGithubUrl:
+      "https://github.com/nathanielpierson/lastfm-backend-node-version/tree/main",
     image: "src/Images/Charting App Images/2.png",
   },
   {
@@ -40,16 +42,18 @@ export const projects = [
     image: "src/Images/all-moderewstrictive.gif",
   },
   {
-    slug: "example-fullstack-project-two",
-    title: "Project Four",
+    slug: "example-fullstack-project-four",
+    title: "tournament project",
     description:
-      "Another project description. Highlight the key features and your role in building it.",
+      "Work in progress. A way to view tournament results with no spoilers by clicking on matchups in the app.",
     longDescription:
       "Use this slot for another full-stack project. You can describe the problem it solves, the architecture, and anything you learned while building it.",
-    technologies: ["Python", "Flask", "PostgreSQL"],
+    technologies: ["coding"],
     liveUrl: "https://example.com",
-    frontendGithubUrl: "https://github.com/yourusername/project-two-frontend",
-    backendGithubUrl: "https://github.com/yourusername/project-two-backend",
+    frontendGithubUrl:
+      "https://github.com/nathanielpierson/lastfm-timeline-frontend",
+    backendGithubUrl:
+      "https://github.com/nathanielpierson/smash-ai-tournament-backend",
     image: null,
   },
 ];

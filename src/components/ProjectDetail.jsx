@@ -81,7 +81,6 @@ function ProjectDetail() {
                   onBlur={() => setTimeout(() => setDropdownOpen(false), 200)}
                 >
                   GitHub
-                  <span className="dropdown-arrow">▼</span>
                 </button>
                 {dropdownOpen && (
                   <div className="github-dropdown">
@@ -109,7 +108,7 @@ function ProjectDetail() {
                 href={project.frontendGithubUrl || project.backendGithubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="project-link"
+                className="project-link with-arrow"
               >
                 View Code
               </a>
