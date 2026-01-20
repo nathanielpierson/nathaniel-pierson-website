@@ -1,3 +1,7 @@
+import saladbarLogo from "../Images/saladbar-logo03.gif";
+import lastfmChart2 from "../Images/Charting App Images/2.png";
+import kaleidoscopesGif from "../Images/all-moderewstrictive.gif";
+
 export const projects = [
   {
     slug: "saladbar-plant-growing-app",
@@ -11,7 +15,7 @@ export const projects = [
     frontendGithubUrl:
       "https://github.com/nathanielpierson/plant-capstone-frontend",
     backendGithubUrl: "https://github.com/nathanielpierson/plant-capstone-app",
-    image: "src/Images/saladbar-logo03.gif",
+    image: saladbarLogo,
   },
   {
     slug: "example-fullstack-project-two",
@@ -25,7 +29,7 @@ export const projects = [
       "https://github.com/nathanielpierson/lastfm-timeline-frontend",
     backendGithubUrl:
       "https://github.com/nathanielpierson/lastfm-backend-node-version/tree/main",
-    image: "src/Images/Charting App Images/2.png",
+    image: lastfmChart2,
   },
   {
     slug: "modular-kaleidoscopes",
@@ -39,7 +43,7 @@ export const projects = [
     frontendGithubUrl:
       "https://github.com/nathanielpierson/processing/tree/main",
     backendGithubUrl: null,
-    image: "src/Images/all-moderewstrictive.gif",
+    image: kaleidoscopesGif,
   },
   {
     slug: "example-fullstack-project-four",
