@@ -6,11 +6,7 @@ function Contact() {
       <div className="container">
         <h2 className="section-title">Get In Touch</h2>
         <p className="section-subtitle">
-          I'm always open to concepts of innovation, creativity, and emerging
-          technology. Feel free to reach out to connect one of the following
-          ways, whether it's regarding business opportunities, questions about
-          my projects I am continually building, or even if you want to talk
-          music or video art.
+          I'm always looking to expand my network, and I enjoy learning about new technologies in coding in AI. Feel free to reach out to connect one of the following ways, whether it's regarding business opportunities, questions about my projects I am continually building, or even if you want to talk music or video art.
         </p>
         <div className="contact-content">
           <div className="contact-info">
