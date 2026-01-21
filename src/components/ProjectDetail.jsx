@@ -3,6 +3,36 @@ import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import "./ProjectDetail.css";
 
+function buildYouTubeEmbedUrl(youtubeUrl) {
+  if (!youtubeUrl) return null;
+  try {
+    const url = new URL(youtubeUrl);
+    const isYouTube =
+      url.hostname === "www.youtube.com" ||
+      url.hostname === "youtube.com" ||
+      url.hostname === "youtu.be";
+    if (!isYouTube) return null;
+
+    let videoId = null;
+    if (url.hostname === "youtu.be") {
+      videoId = url.pathname.replace("/", "");
+    } else {
+      videoId = url.searchParams.get("v");
+    }
+    if (!videoId) return null;
+
+    const t = url.searchParams.get("t");
+    const start =
+      t && /^\d+s?$/.test(t) ? String(parseInt(t.replace("s", ""), 10)) : null;
+
+    const embed = new URL(`https://www.youtube.com/embed/${videoId}`);
+    if (start && start !== "NaN") embed.searchParams.set("start", start);
+    return embed.toString();
+  } catch {
+    return null;
+  }
+}
+
 function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
@@ -10,6 +40,7 @@ function ProjectDetail() {
   const hasBothGithub = project?.frontendGithubUrl && project?.backendGithubUrl;
   const hasSingleGithub =
     project?.frontendGithubUrl || project?.backendGithubUrl;
+  const youtubeEmbedUrl = buildYouTubeEmbedUrl(project?.youtubeUrl);
 
   if (!project) {
     return (
@@ -41,6 +72,14 @@ function ProjectDetail() {
           </div>
         </div>
 
+        {project.longDescription && (
+          <div className="project-detail-long project-detail-long-top">
+            {project.longDescription.split("\n\n").map((para, index) => (
+              <p key={index}>{para}</p>
+            ))}
+          </div>
+        )}
+
         {project.screenshots && project.screenshots.length > 0 && (
           <div className="project-detail-gallery">
             {project.screenshots.map((shot, index) => (
@@ -66,14 +105,6 @@ function ProjectDetail() {
 
         <div className="project-detail-body">
           <p className="project-detail-description">{project.description}</p>
-
-          {project.longDescription && (
-            <div className="project-detail-long">
-              {project.longDescription.split("\n\n").map((para, index) => (
-                <p key={index}>{para}</p>
-              ))}
-            </div>
-          )}
 
           <div className="project-detail-links">
             {project.liveUrl && (
@@ -131,6 +162,20 @@ function ProjectDetail() {
           <Link to="/#projects" className="project-detail-back">
             ← Back to projects
           </Link>
+
+          {youtubeEmbedUrl && (
+            <div className="project-detail-video">
+              <h2 className="project-detail-video-title">Demo Video</h2>
+              <div className="project-detail-video-frame">
+                <iframe
+                  src={youtubeEmbedUrl}
+                  title={`${project.title} demo video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -20,9 +20,9 @@ export const projects = [
     image: saladbarLogo,
   },
   {
-    slug: "example-fullstack-project-two",
+    slug: "album-charting-app",
     title: "Last FM Charting App",
-    description: "needs written",
+    description: "Music data app that charts album plays over time using the last.fm API",
     longDescription:
       "My Last.fm Charting App is an exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.",
     technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
@@ -57,6 +57,7 @@ export const projects = [
       "https://github.com/nathanielpierson/processing/tree/main",
     backendGithubUrl: null,
     image: kaleidoscopesGif,
+    youtubeUrl: "https://www.youtube.com/watch?v=C6xWisqpqkg&t=7s",
   },
   {
     slug: "example-fullstack-project-four",
