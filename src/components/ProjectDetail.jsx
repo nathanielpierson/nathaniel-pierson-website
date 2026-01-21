@@ -41,16 +41,6 @@ function ProjectDetail() {
           </div>
         </div>
 
-        {project.image && (
-          <div className="project-detail-image-wrapper">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-detail-image"
-            />
-          </div>
-        )}
-
         {project.screenshots && project.screenshots.length > 0 && (
           <div className="project-detail-gallery">
             {project.screenshots.map((shot, index) => (

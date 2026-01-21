@@ -8,15 +8,14 @@ function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              My educational background in animation and video editing was
+              I am a programmer with a passion for creativity and innovative approaches to problem solving. My educational background in animation and video editing was
               developed at Virginia Commonwealth University through their
               diverse Kinetic Imaging program. This and my creative pursuits as
               a hobby musician show how I am able to think outside the box. The
               same skills that are used to storyboard an animation project are
               used when using an AI assistant tool like Cursor or Claude to keep
-              my own end goal in mind when directing software programs. I took a
-              coding bootcamp in 2025 that taught me well-rounded skills for
-              being able to pick up and learn in any coding language and
+              my own end goal in mind when directing software programs. I attended a
+              coding bootcamp in 2025 that helped me develop an understanding of programming core concepts that I can use to pick up and learn any coding language and
               framework. Specifically this bootcamp taught me transferable
               skills through React for frontend and Ruby on Rails on backend. I
               have a mix of technical expertise and creative inclination to be

@@ -5,12 +5,11 @@ function Hero() {
     <section id="home" className="hero">
       <div className="hero-content">
         <h1 className="hero-title">
-          Hi, I'm <span className="highlight">Nathaniel Pierson</span>
+          My name is <span className="highlight">Nathaniel Pierson</span>
         </h1>
-        <p className="hero-subtitle">Full Stack Developer & Creative Problem Solver</p>
+        <p className="hero-subtitle">Full Stack Developer & AI Workflow Expert</p>
         <p className="hero-description">
-          Welcome to my portfolio! Here you'll find a collection of my projects,
-          showcasing my skills in web development, software engineering, and more.
+          Welcome to my portfolio! I hope spending some time with my body of work shows you my journey of learning, discovery, and conquering difficult challenges to become a proficient developer, any possibly even gives some ideas for your own next project.
         </p>
         <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary">View Projects</a>

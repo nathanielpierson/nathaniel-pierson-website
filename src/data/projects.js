@@ -13,7 +13,7 @@ export const projects = [
     longDescription:
       "Saladbar is a full-stack application for plant enthusiasts. It lets users create an account, add plants to their collection, and log care events like watering and repotting.\n\nOn the frontend, a React-based interface focuses on approachability and fun visuals so plant care feels more like a game than a chore. On the backend, a Node.js + Postgres API handles authentication, data storage, and querying, giving the app room to scale as collections grow.",
     technologies: ["React", "Node.js", "Postgres"],
-    liveUrl: "https://example.com",
+    liveUrl: "https://plant-capstone-frontend.onrender.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/plant-capstone-frontend",
     backendGithubUrl: "https://github.com/nathanielpierson/plant-capstone-app",
@@ -26,7 +26,7 @@ export const projects = [
     longDescription:
       "My Last.fm Charting App is an exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.",
     technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
-    liveUrl: "https://example.com",
+    liveUrl: "https://lastfm-charting-app-frontend.onrender.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/lastfm-timeline-frontend",
     backendGithubUrl:
@@ -65,7 +65,7 @@ export const projects = [
       "Work in progress. A way to view tournament results with no spoilers by clicking on matchups in the app.",
     longDescription:
       "Use this slot for another full-stack project. You can describe the problem it solves, the architecture, and anything you learned while building it.",
-    technologies: ["coding"],
+    technologies: ["Coding"],
     liveUrl: "https://example.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/lastfm-timeline-frontend",
