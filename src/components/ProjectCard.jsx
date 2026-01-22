@@ -8,7 +8,7 @@ function ProjectCard({ project }) {
   const hasSingleGithub = project.frontendGithubUrl || project.backendGithubUrl;
 
   return (
-    <div className="project-card">
+    <div className={`project-card ${dropdownOpen ? 'dropdown-open' : ''}`}>
       <div className="project-image">
         {project.image ? (
           <img src={project.image} alt={project.title} />
