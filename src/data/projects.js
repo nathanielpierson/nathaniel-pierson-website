@@ -1,4 +1,6 @@
 import saladbarLogo from "../Images/SaladBar images/saladbar-logo03.gif";
+import saladbarPlantGrow from "../Images/SaladBar images/plantgrow.gif";
+import saladbarPlantUpdate from "../Images/SaladBar images/plant-update-screenshot.png";
 import lastfmChartMain from "../Images/Charting App Images/2.png";
 import lastfmChartScreen01 from "../Images/Charting App Images/lastfm-sorting-screenshot01.png";
 import lastfmChartScreen03 from "../Images/Charting App Images/lastfm-sorting-screenshot03.png";
@@ -11,18 +13,30 @@ export const projects = [
     description:
       "Track your plant collection, watering schedule, and growth over time with a playful, game-like interface.",
     longDescription:
-      "Saladbar is a full-stack application for plant enthusiasts. It lets users create an account, add plants to their collection, and log care events like watering and repotting.\n\nOn the frontend, a React-based interface focuses on approachability and fun visuals so plant care feels more like a game than a chore. On the backend, a Node.js + Postgres API handles authentication, data storage, and querying, giving the app room to scale as collections grow.",
-    technologies: ["React", "Node.js", "Postgres"],
+      "Saladbar is a web application I built using Ruby on Rails and React.js. The project is a inspired by farming simulators but has a more realistic framing. The user has the ability to make new instances of available plants and water them once set intervals are reached until they are fully grown; currently, the app can track how many of a type of plant a user has grown as well as how many they have currently growing; my future plans with the project are to add rewards for growing certain amounts of certain plants. One thing I really like about the structure of the app is its the way I built it with scalability. As an admin of the app, I have the ability to add new types of plants that can be created with their own specific watering requirements and growth rates.",
+    technologies: ["React", "Ruby on Rails", "Postgres", "npm"],
     liveUrl: "https://plant-capstone-frontend.onrender.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/plant-capstone-frontend",
     backendGithubUrl: "https://github.com/nathanielpierson/plant-capstone-app",
     image: saladbarLogo,
+    screenshots: [
+      {
+        src: saladbarPlantGrow,
+        caption:
+          "On your schedules page, you can plant new plants, choosing the type of plant from a dropdown menu. It is available immediately to water, and then it will tell you to come back after an amount of time (specific to the type of plant) to water it again.",
+      },
+      {
+        src: saladbarPlantUpdate,
+        caption:
+          "Each type of plant has its own unique attributes; namely, the amount of time you have to wait between watering it, the amount of sunlight it needs, and how many times you need to water it before it is fully grown. The app also keeps track of how many of each time of plant you have currently growing and have already grown, and you can see those stats on your profile page.",
+      },
+    ],
   },
   {
     slug: "album-charting-app",
     title: "Last FM Charting App",
-    description: "Music data app that charts album plays over time using the last.fm API",
+    description: "Music data app that charts album plays over time using the last.fm API.",
     longDescription:
       "My Last.fm Charting App is an exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.",
     technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
@@ -50,7 +64,7 @@ export const projects = [
     description:
       "Experimental, interactive kaleidoscope visuals built in Processing, focusing on recursion and user-driven variation.",
     longDescription:
-      "This project explores recursion, symmetry, and emergent visuals using Processing, a Java-based creative coding framework.\n\nUsers can interact with parameters like color, rotation speed, and symmetry count to generate unique kaleidoscopic compositions, turning a simple ruleset into an endless set of visual outcomes.",
+      "This project explores recursion, symmetry, and emergent visuals using Processing, a Java-based creative coding framework.\n\nUsers can interact with parameters like color, rotation speed, and symmetry count to generate unique kaleidoscopic compositions. Recursion occurs across different modes, such as with different shapes. Includes 2D and 3D modes, as well as a 2.5D using animated beziers. Different buttons change the colors, shapes, amount of repeating shapes, and other facets of the animation.",
     technologies: ["Java", "Processing", "macOS"],
     liveUrl: null,
     frontendGithubUrl:
@@ -72,6 +86,6 @@ export const projects = [
       "https://github.com/nathanielpierson/lastfm-timeline-frontend",
     backendGithubUrl:
       "https://github.com/nathanielpierson/smash-ai-tournament-backend",
-    image: null,
+    image: "src/Images/Tournament Images/Custom CPU Tournament Logo.png",
   },
 ];
