@@ -56,6 +56,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  max-height: 5.75rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .skill-tag {
