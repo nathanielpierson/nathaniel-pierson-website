@@ -34,14 +34,20 @@ function About() {
               <div className="skills-list">
                 <span className="skill-tag">React</span>
                 <span className="skill-tag">JavaScript</span>
+                <span className="skill-tag">TypeScript</span>
+                <span className="skill-tag">Node Package Manager</span>
                 <span className="skill-tag">Node.js</span>
+                <span className="skill-tag">Express</span>
+                <span className="skill-tag">Ruby on Rails</span>
+                <span className="skill-tag">SQL</span>
                 <span className="skill-tag">Python</span>
                 <span className="skill-tag">HTML/CSS</span>
+                <span className="skill-tag">Tailwind</span>
                 <span className="skill-tag">Git</span>
-                <span className="skill-tag">Ruby on Rails</span>
                 <span className="skill-tag">Java</span>
                 <span className="skill-tag">Cursor</span>
                 <span className="skill-tag">Claude</span>
+                <span className="skill-tag">Cline</span>
               </div>
             </div>
           </div>
