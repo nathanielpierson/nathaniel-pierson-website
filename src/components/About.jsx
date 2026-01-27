@@ -35,7 +35,7 @@ function About() {
                 <span className="skill-tag">React</span>
                 <span className="skill-tag">JavaScript</span>
                 <span className="skill-tag">TypeScript</span>
-                <span className="skill-tag">Node Package Manager</span>
+                <span className="skill-tag">npm</span>
                 <span className="skill-tag">Node.js</span>
                 <span className="skill-tag">Express</span>
                 <span className="skill-tag">Ruby on Rails</span>
