@@ -4,6 +4,11 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
+        <img 
+          src="/headshot.jpg" 
+          alt="Nathaniel Pierson" 
+          className="hero-headshot"
+        />
         <h1 className="hero-title">
           <span className="highlight">Nathaniel Pierson</span>
         </h1>

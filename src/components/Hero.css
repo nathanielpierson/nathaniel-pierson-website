@@ -14,6 +14,17 @@
   animation: fadeInUp 0.8s ease-out;
 }
 
+.hero-headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  margin: 0 auto 2rem;
+  display: block;
+}
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
@@ -91,6 +102,12 @@
 }
 
 @media (max-width: 768px) {
+  .hero-headshot {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+  }
+  
   .hero-title {
     font-size: 2.5rem;
   }
