@@ -5,6 +5,7 @@ import lastfmChartMain from "../Images/Charting App Images/2.png";
 import lastfmChartScreen01 from "../Images/Charting App Images/lastfm-sorting-screenshot01.png";
 import lastfmChartScreen03 from "../Images/Charting App Images/lastfm-sorting-screenshot03.png";
 import kaleidoscopesGif from "../Images/Kaleidoscopes images/all-moderewstrictive.gif";
+import tournamentLogo from "../Images/Tournament Images/Custom CPU Tournament Logo.png";
 
 export const projects = [
   {
@@ -80,12 +81,12 @@ export const projects = [
       "Work in progress. A way to view tournament results with no spoilers by clicking on matchups in the app.",
     longDescription:
       "Use this slot for another full-stack project. You can describe the problem it solves, the architecture, and anything you learned while building it.",
-    technologies: ["Coding"],
-    liveUrl: "https://example.com",
+    technologies: ["React", "PostGres", "Adobe Creative Suite"],
+    liveUrl: "https://smash-ai-tournament-frontend.onrender.com",
     frontendGithubUrl:
-      "https://github.com/nathanielpierson/lastfm-timeline-frontend",
+      "https://github.com/nathanielpierson/smash-ai-tournament-frontend",
     backendGithubUrl:
       "https://github.com/nathanielpierson/smash-ai-tournament-backend",
-    image: "src/Images/Tournament Images/Custom CPU Tournament Logo.png",
+    image: tournamentLogo,
   },
 ];

@@ -5,7 +5,7 @@ function Hero() {
     <section id="home" className="hero">
       <div className="hero-content">
         <img 
-          src="/headshot.jpg" 
+          src="/croppedshot.jpg" 
           alt="Nathaniel Pierson" 
           className="hero-headshot"
         />
