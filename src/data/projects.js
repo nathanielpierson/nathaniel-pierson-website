@@ -75,13 +75,13 @@ export const projects = [
     youtubeUrl: "https://www.youtube.com/watch?v=C6xWisqpqkg&t=7s",
   },
   {
-    slug: "example-fullstack-project-four",
+    slug: "smash-bros-custom-ai-tournament",
     title: "tournament project",
     description:
-      "Work in progress. A way to view tournament results with no spoilers by clicking on matchups in the app.",
+      "A project that combines video development with website programming to view tournament results by clicking on matchups in an app.",
     longDescription:
-      "Use this slot for another full-stack project. You can describe the problem it solves, the architecture, and anything you learned while building it.",
-    technologies: ["React", "PostGres", "Adobe Creative Suite"],
+      "An abstract idea I had for testing how custom edited characters in a video game from 2014 has turned into one of my most ambitious and interesting coding projects. While still in progress, here you can see where the development of the project is going -- you click on a matchup and can watch it direct from a YouTube embed, or you can even hit skip to see the result if it's not a match you're interested in learning the nitty gritty of how the result happened.",
+    technologies: ["Javascript", "HTML", "CSS", "Postgres", "Adobe Creative Suite"],
     liveUrl: "https://smash-ai-tournament-frontend.onrender.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/smash-ai-tournament-frontend",
