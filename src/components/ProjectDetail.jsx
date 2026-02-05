@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
+import Contact from "./Contact";
 import "./ProjectDetail.css";
 
 function buildYouTubeEmbedUrl(youtubeUrl) {
@@ -195,6 +196,7 @@ function ProjectDetail() {
           )}
         </div>
       </div>
+      <Contact />
     </section>
   );
 }
