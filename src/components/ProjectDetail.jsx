@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import Contact from "./Contact";
@@ -42,6 +42,11 @@ function ProjectDetail() {
   const hasSingleGithub =
     project?.frontendGithubUrl || project?.backendGithubUrl;
   const youtubeEmbedUrl = buildYouTubeEmbedUrl(project?.youtubeUrl);
+
+  // Scroll to top when navigating to a project page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!project) {
     return (
