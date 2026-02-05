@@ -8,26 +8,56 @@ function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I am a programmer with a passion for creativity and innovative approaches to problem solving. My educational background in animation and video editing was
-              developed at Virginia Commonwealth University through their
-              diverse Kinetic Imaging program. This and my creative pursuits as
-              a hobby musician show how I am able to think outside the box. The
-              same skills that are used to storyboard an animation project are
-              used when using an AI assistant tool like Cursor or Claude to keep
-              my own end goal in mind when directing software programs. I attended a
-              coding bootcamp in 2025 that helped me develop an understanding of programming core concepts that I can use to pick up and learn any coding language and
-              framework. Specifically this bootcamp taught me transferable
-              skills through React for frontend and Ruby on Rails on backend. I
-              have a mix of technical expertise and creative inclination to be
-              able to use tools that are limited only by your imagination and
-              have a passion for the specifics of how technology functions to
-              figure out what happens when they don’t go as planned. Apart from
-              my professional pursuits, I have a variety of other interests,
-              especially in music. I enjoy going to concerts as well as
-              songwriting and producing my own music. I play keyboard and
-              electric guitar and am learning vocals. I currently reside in the
-              Charlottesville, VA area but am in between rentals and open to
-              explore any new area where I am offered a job.
+              I am a full stack programmer who has honed my skills in creative
+              problem solving and mastering emerging technologies. I use my
+              experience to create versatile programs with a strong coding
+              foundation but a forward workflow that pushes me to create quality
+              content quickly. My work is informed by both the analytical
+              thinking I developed from my coding bootcamp through Actualize and
+              through my artistic perspective gained in my BFA from Virginia
+              Commonwealth University, allowing me to design solutions that are
+              intentional, flexible, and user-focused.
+            </p>
+            <p>
+              I studied animation and video editing at Virginia Commonwealth
+              University through the Kinetic Imaging program, where I developed
+              a foundation in visual storytelling and conceptual thinking. This
+              creative background continues to influence how I approach software
+              development, particularly in maintaining a clear vision from
+              concept through execution.
+            </p>
+            <p>
+              Planning, iteration, and goal-oriented execution are the skills I
+              developed and used to storyboard animation projects, and they
+              translate directly into my programming workflow. I start my
+              projects with user stories and pay attention to the small details,
+              especially when I apply this mindset when working with
+              AI-assisted development tools. I use Cursor and Claude to
+              strategically guide software toward a defined outcome rather than
+              relying on them passively.
+            </p>
+            <p>
+              In 2025, I completed a full stack coding bootcamp with Actualize
+              that reinforced my understanding of core programming principles and
+              strengthened my ability to quickly adapt to new languages and
+              frameworks. The program emphasized transferable skills through
+              hands-on experience with React for frontend development and Ruby
+              on Rails for backend development, and I have been able to transfer
+              those skills to other frameworks and languages such as Node and
+              Express.js.
+            </p>
+            <p>
+              Outside of work and spending time with my friends, family, and
+              pets, music is the most important part of my life. I love going to
+              concerts, writing songs, and producing and releasing my own
+              albums. I play keyboard and electric guitar, and I enjoy learning
+              the technical aspects of synthesizers to make my own sounds.
+            </p>
+            <p>
+              I’m currently based in the central Virginia area, but I’m very
+              open to relocating for the right opportunity. I enjoy exploring
+              new places and would be excited to land somewhere new for work and
+              life.
             </p>
             <div className="skills">
               <h3>Skills & Technologies</h3>
