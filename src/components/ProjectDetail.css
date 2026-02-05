@@ -81,19 +81,6 @@
   margin-bottom: 1rem;
 }
 
-.project-detail-bullets {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.7;
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-  list-style-type: disc;
-}
-
-.project-detail-bullets li {
-  margin-bottom: 0.5rem;
-}
-
 .project-detail-long-top {
   margin-bottom: 2rem;
 }
