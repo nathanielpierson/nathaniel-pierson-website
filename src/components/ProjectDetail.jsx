@@ -74,9 +74,26 @@ function ProjectDetail() {
 
         {project.longDescription && (
           <div className="project-detail-long project-detail-long-top">
-            {project.longDescription.split("\n\n").map((para, index) => (
-              <p key={index}>{para}</p>
-            ))}
+            {project.longDescription.split("\n\n").map((para, index) => {
+              // Check if paragraph contains bullet points (lines starting with "- ")
+              const lines = para.split("\n");
+              const hasBullets = lines.some((line) => line.trim().startsWith("- "));
+              
+              if (hasBullets) {
+                return (
+                  <ul key={index} className="project-detail-bullets">
+                    {lines
+                      .filter((line) => line.trim().startsWith("- "))
+                      .map((line, bulletIndex) => (
+                        <li key={bulletIndex}>
+                          {line.trim().substring(2)}
+                        </li>
+                      ))}
+                  </ul>
+                );
+              }
+              return <p key={index}>{para}</p>;
+            })}
           </div>
         )}
 
