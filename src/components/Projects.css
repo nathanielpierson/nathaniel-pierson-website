@@ -13,6 +13,11 @@
   margin-right: auto;
 }
 
+.projects .section-subtitle.projects-intro {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
