@@ -85,10 +85,19 @@
 
 .project-links {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 1rem;
   margin-top: auto;
   flex-wrap: wrap;
+}
+
+.project-links .project-link,
+.project-links a.project-link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+  padding: 0;
+  min-height: unset;
 }
 
 .project-link {
@@ -128,12 +137,23 @@
   position: relative;
   z-index: 1001;
   isolation: isolate;
+  display: inline-flex;
+  align-items: baseline;
 }
 
 .github-dropdown-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  min-height: 0;
+  height: auto;
+  vertical-align: baseline;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .github-dropdown {
