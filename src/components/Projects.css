@@ -13,9 +13,14 @@
   margin-right: auto;
 }
 
+.projects .section-subtitle {
+  font-style: italic;
+}
+
 .projects .section-subtitle.projects-intro {
   margin-top: -1rem;
   margin-bottom: 2rem;
+  font-size: 0.9rem;
 }
 
 .projects-grid {
