@@ -1,4 +1,5 @@
 import './Hero.css'
+import ViewCount from './ViewCount'
 
 function Hero() {
   return (
@@ -20,6 +21,7 @@ function Hero() {
           <a href="#projects" className="btn btn-primary">View Projects</a>
           <a href="#contact" className="btn btn-secondary">Get In Touch</a>
         </div>
+        <ViewCount />
       </div>
     </section>
   )

@@ -37,9 +37,10 @@ export const projects = [
   {
     slug: "album-charting-app",
     title: "Last FM Charting App",
-    description: "Music data app that charts album plays over time using the last.fm API.",
+    description:
+      "Music data app that charts album plays over time using the last.fm API.",
     longDescription:
-      "My Last.fm Charting App is an exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.\n\nThe Last.fm API provides \"top albums\" for a single timeframe at a time, but it does not offer historical breakdowns that allow direct comparison (for example, seeing how an album's popularity changes between 3 months and 6 months).\n\nThis backend solves that limitation by:\n\n- Making multiple Last.fm API requests across different time ranges\n- Normalizing the results into a single data model\n- Persisting derived play count data in a PostgreSQL database\n\nAll of this data manipulation happens behind the scenes so the user gets consistent album data for a clean chart of their streams over time.",
+      'My Last.fm Charting App is an exploration in processing and manipulating data from an API. It takes info from the music data analysis website Last fm and transforms it into a new time-based chart that the original site does not offer.\n\nThe Last.fm API provides "top albums" for a single timeframe at a time, but it does not offer historical breakdowns that allow direct comparison (for example, seeing how an album\'s popularity changes between 3 months and 6 months).\n\nThis backend solves that limitation by:\n\n- Making multiple Last.fm API requests across different time ranges\n- Normalizing the results into a single data model\n- Persisting derived play count data in a PostgreSQL database\n\nAll of this data manipulation happens behind the scenes so the user gets consistent album data for a clean chart of their streams over time.',
     technologies: ["API Driven Development", "Express.js", "Node.js", "Cursor"],
     liveUrl: "https://lastfm-charting-app-frontend.onrender.com",
     frontendGithubUrl:
@@ -76,12 +77,18 @@ export const projects = [
   },
   {
     slug: "smash-bros-custom-ai-tournament",
-    title: "tournament project",
+    title: "Super Smash Bros Custom AI Tournament",
     description:
       "A project that combines video development with website programming to view tournament results by clicking on matchups in an app.",
     longDescription:
       "An abstract idea I had for testing how custom edited characters in a video game from 2014 has turned into one of my most ambitious and interesting coding projects. While still in progress, here you can see where the development of the project is going -- you click on a matchup and can watch it direct from a YouTube embed, or you can even hit skip to see the result if it's not a match you're interested in learning the nitty gritty of how the result happened.",
-    technologies: ["Javascript", "HTML", "CSS", "Postgres", "Adobe Creative Suite"],
+    technologies: [
+      "Javascript",
+      "HTML",
+      "CSS",
+      "Postgres",
+      "Adobe Creative Suite",
+    ],
     liveUrl: "https://smash-ai-tournament-frontend.onrender.com",
     frontendGithubUrl:
       "https://github.com/nathanielpierson/smash-ai-tournament-frontend",

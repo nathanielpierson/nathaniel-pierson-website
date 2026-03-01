@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-view-count-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Returns GA4 total page views for the portfolio view counter. Deploy as a separate service (e.g. Render Web Service).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google-analytics/data": "^4.0.0",
+    "express": "^4.21.0"
+  }
+}
