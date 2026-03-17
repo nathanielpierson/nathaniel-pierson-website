@@ -6,8 +6,6 @@ import lastfmChartScreen01 from "../Images/Charting App Images/lastfm-sorting-sc
 import lastfmChartScreen03 from "../Images/Charting App Images/lastfm-sorting-screenshot03.png";
 import kaleidoscopesGif from "../Images/Kaleidoscopes images/all-moderewstrictive.gif";
 import tournamentLogo from "../Images/Tournament Images/Custom CPU Tournament Logo.png";
-import tournamentModalScreenshot from "../Images/Tournament Images/modal-screenshot.png";
-import tournamentRoundOf64Screenshot from "../Images/Tournament Images/round-of-64-screenshot.png";
 
 export const projects = [
   {
@@ -99,12 +97,12 @@ export const projects = [
     image: tournamentLogo,
     screenshots: [
       {
-        src: tournamentModalScreenshot,
+        src: "/modal-screenshot.png",
         caption:
           "The modal view of a tournament matchup lets you quickly watch the YouTube clip for that specific battle or skip straight to the result if you'd rather keep moving.",
       },
       {
-        src: tournamentRoundOf64Screenshot,
+        src: "/round-of-64-screenshot.png",
         caption:
           "The Round of 64 bracket view shows the full tournament layout so you can explore any matchup and follow your favorite characters through the bracket.",
       },
