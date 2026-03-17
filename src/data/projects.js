@@ -97,14 +97,14 @@ export const projects = [
     image: tournamentLogo,
     screenshots: [
       {
-        src: "/modal-screenshot.png",
-        caption:
-          "The modal view of a tournament matchup lets you quickly watch the YouTube clip for that specific battle or skip straight to the result if you'd rather keep moving.",
-      },
-      {
         src: "/round-of-64-screenshot.png",
         caption:
           "The Round of 64 bracket view shows the full tournament layout so you can explore any matchup and follow your favorite characters through the bracket.",
+      },
+      {
+        src: "/modal-screenshot.png",
+        caption:
+          "The modal view of a tournament matchup lets you quickly watch the YouTube clip for that specific battle or skip straight to the result if you'd rather keep moving.",
       },
     ],
   },
