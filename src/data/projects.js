@@ -5,7 +5,7 @@ import lastfmChartMain from "../Images/Charting App Images/2.png";
 import lastfmChartScreen01 from "../Images/Charting App Images/lastfm-sorting-screenshot01.png";
 import lastfmChartScreen03 from "../Images/Charting App Images/lastfm-sorting-screenshot03.png";
 import kaleidoscopesGif from "../Images/Kaleidoscopes images/all-moderewstrictive.gif";
-import tournamentLogo from "../Images/Tournament Images/Custom CPU Tournament Logo.png";
+import tournamentGifLogo from "../Images/Tournament Images/smash-tourney-gif.gif";
 
 export const projects = [
   {
@@ -94,7 +94,7 @@ export const projects = [
       "https://github.com/nathanielpierson/smash-ai-tournament-frontend",
     backendGithubUrl:
       "https://github.com/nathanielpierson/smash-ai-tournament-backend",
-    image: tournamentLogo,
+    image: tournamentGifLogo,
     screenshots: [
       {
         src: "/round-of-64-screenshot.png",
