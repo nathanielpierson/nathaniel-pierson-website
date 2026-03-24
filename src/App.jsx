@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import GitHubCarousel from "./components/GitHubCarousel";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -17,6 +18,7 @@ function App() {
             path="/"
             element={
               <>
+                <GitHubCarousel />
                 <Hero />
                 <About />
                 <Projects />
