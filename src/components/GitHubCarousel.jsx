@@ -115,30 +115,32 @@ function GitHubCarousel() {
 
   return (
     <section className="github-carousel-section" aria-label="Recent GitHub commits">
-      <div className="github-carousel-container">
-        <h2 className="github-carousel-title">Recent GitHub Activity</h2>
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          slidesPerView={1}
-          loop={commits.length > 1}
-          autoplay={{
-            delay: 4200,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          pagination={{ clickable: true }}
-          className="github-swiper"
-        >
-          {commits.map((commit) => (
-            <SwiperSlide key={commit.id}>
-              <article className="commit-slide">
-                <p className="commit-message">{commit.message}</p>
-                <p className="commit-repo">{commit.repo}</p>
-                <time className="commit-date">{formatCommitDate(commit.date)}</time>
-              </article>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="github-carousel-band">
+        <div className="github-carousel-inner">
+          <h2 className="github-carousel-title">Recent GitHub Activity</h2>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            loop={commits.length > 1}
+            autoplay={{
+              delay: 4200,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{ clickable: true }}
+            className="github-swiper"
+          >
+            {commits.map((commit) => (
+              <SwiperSlide key={commit.id}>
+                <article className="commit-slide">
+                  <p className="commit-message">{commit.message}</p>
+                  <p className="commit-repo">{commit.repo}</p>
+                  <time className="commit-date">{formatCommitDate(commit.date)}</time>
+                </article>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );
