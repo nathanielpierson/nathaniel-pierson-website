@@ -7,6 +7,7 @@ import "./GitHubCarousel.css";
 
 const GITHUB_USERNAME = "nathanielpierson";
 const MAX_COMMITS = 10;
+const REFRESH_MS = 10 * 60 * 1000;
 const DEBUG = import.meta.env.DEV;
 
 function formatCommitDate(isoDate) {
@@ -27,11 +28,15 @@ function GitHubCarousel() {
 
   useEffect(() => {
     const eventsUrl = `https://api.github.com/users/${GITHUB_USERNAME}/events/public`;
-    const ac = new AbortController();
+    let abortController = new AbortController();
 
-    (async () => {
+    const loadCommits = async () => {
+      abortController.abort();
+      abortController = new AbortController();
+      const { signal } = abortController;
+
       try {
-        const eventsRes = await fetch(eventsUrl, { signal: ac.signal });
+        const eventsRes = await fetch(eventsUrl, { signal });
         if (DEBUG) {
           const remaining = eventsRes.headers.get("X-RateLimit-Remaining");
           console.log("[GitHubCarousel] GET", eventsUrl, "→", eventsRes.status, eventsRes.statusText, {
@@ -46,6 +51,7 @@ function GitHubCarousel() {
         if (!Array.isArray(events)) {
           if (DEBUG) console.warn("[GitHubCarousel] Events API did not return an array:", events);
           setCommits([]);
+          setError(false);
           return;
         }
 
@@ -62,7 +68,7 @@ function GitHubCarousel() {
 
           try {
             const commitUrl = `https://api.github.com/repos/${repoFullName}/commits/${headSha}`;
-            const commitRes = await fetch(commitUrl, { signal: ac.signal });
+            const commitRes = await fetch(commitUrl, { signal });
             if (DEBUG) {
               const rem = commitRes.headers.get("X-RateLimit-Remaining");
               console.log("[GitHubCarousel] GET commit", repoFullName.slice(0, 40), "… →", commitRes.status, {
@@ -82,7 +88,7 @@ function GitHubCarousel() {
               date: event.created_at,
             });
           } catch {
-            if (ac.signal.aborted) return;
+            if (signal.aborted) return;
             continue;
           }
         }
@@ -101,14 +107,33 @@ function GitHubCarousel() {
         }
 
         setCommits(recentCommits);
+        setError(false);
       } catch (err) {
-        if (ac.signal.aborted) return;
+        if (signal.aborted) return;
         if (DEBUG) console.warn("[GitHubCarousel] Load failed (carousel hidden):", err);
         setError(true);
       }
-    })();
+    };
 
-    return () => ac.abort();
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        void loadCommits();
+      }
+    };
+
+    loadCommits();
+    const intervalId = window.setInterval(() => {
+      void loadCommits();
+    }, REFRESH_MS);
+    window.addEventListener("focus", loadCommits);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      window.clearInterval(intervalId);
+      window.removeEventListener("focus", loadCommits);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      abortController.abort();
+    };
   }, []);
 
   if (error || commits.length === 0) return null;
