@@ -1,12 +1,17 @@
-.hero {
+#home.hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 2rem;
+  padding: calc(5.25rem + 3.1rem) 2rem 2rem;
   text-align: center;
+}
+
+.github-carousel-section + #home.hero,
+main:has(.github-carousel-section) #home.hero {
+  padding-top: 3.1rem;
 }
 
 .hero-content {
@@ -103,6 +108,15 @@
 }
 
 @media (max-width: 768px) {
+  #home.hero {
+    padding: calc(4.9rem + 2.35rem) 1rem 1.75rem;
+  }
+
+  .github-carousel-section + #home.hero,
+  main:has(.github-carousel-section) #home.hero {
+    padding-top: 2.35rem;
+  }
+
   .hero-headshot {
     width: 150px;
     height: 150px;
