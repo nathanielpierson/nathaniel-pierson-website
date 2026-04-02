@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useClickOutside } from "../hooks/useClickOutside";
 import "./ProjectCard.css";
 
 function ProjectCard({ project }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const githubDropdownRef = useRef(null);
+  useClickOutside(githubDropdownRef, () => setDropdownOpen(false), dropdownOpen);
   const hasBothGithub = project.frontendGithubUrl && project.backendGithubUrl;
   const hasSingleGithub = project.frontendGithubUrl || project.backendGithubUrl;
 
@@ -43,11 +46,12 @@ function ProjectCard({ project }) {
             </a>
           )}
           {hasBothGithub ? (
-            <div className="github-dropdown-wrapper">
+            <div className="github-dropdown-wrapper" ref={githubDropdownRef}>
               <button
+                type="button"
                 className="project-link github-dropdown-btn"
+                aria-expanded={dropdownOpen}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                onBlur={() => setTimeout(() => setDropdownOpen(false), 200)}
               >
                 GitHub
               </button>
@@ -58,6 +62,7 @@ function ProjectCard({ project }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="github-dropdown-item"
+                    onClick={() => setDropdownOpen(false)}
                   >
                     Frontend
                   </a>
@@ -66,6 +71,7 @@ function ProjectCard({ project }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="github-dropdown-item"
+                    onClick={() => setDropdownOpen(false)}
                   >
                     Backend
                   </a>

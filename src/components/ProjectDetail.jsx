@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import Contact from "./Contact";
+import { useClickOutside } from "../hooks/useClickOutside";
 import "./ProjectDetail.css";
 
 function buildYouTubeEmbedUrl(youtubeUrl) {
@@ -38,6 +39,8 @@ function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const githubDropdownRef = useRef(null);
+  useClickOutside(githubDropdownRef, () => setDropdownOpen(false), dropdownOpen);
   const hasBothGithub = project?.frontendGithubUrl && project?.backendGithubUrl;
   const hasSingleGithub =
     project?.frontendGithubUrl || project?.backendGithubUrl;
@@ -124,11 +127,12 @@ function ProjectDetail() {
               </a>
             )}
             {hasBothGithub ? (
-              <div className="github-dropdown-wrapper">
+              <div className="github-dropdown-wrapper" ref={githubDropdownRef}>
                 <button
+                  type="button"
                   className="project-link github-dropdown-btn"
+                  aria-expanded={dropdownOpen}
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  onBlur={() => setTimeout(() => setDropdownOpen(false), 200)}
                 >
                   GitHub
                 </button>
@@ -139,6 +143,7 @@ function ProjectDetail() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="github-dropdown-item"
+                      onClick={() => setDropdownOpen(false)}
                     >
                       Frontend Code
                     </a>
@@ -147,6 +152,7 @@ function ProjectDetail() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="github-dropdown-item"
+                      onClick={() => setDropdownOpen(false)}
                     >
                       Backend Code
                     </a>
